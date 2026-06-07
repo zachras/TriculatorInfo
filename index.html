@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Triculator</title>
+<title>Triculator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -39,45 +39,47 @@
   h1 {
     font-family: 'Fraunces', serif;
     font-weight: 600;
-    font-size: clamp(2rem, 6vw, 2.8rem);
-    line-height: 1.1;
-    margin: 0 0 0.4rem;
-    letter-spacing: -0.01em;
+    font-size: clamp(2.4rem, 8vw, 3.6rem);
+    line-height: 1.05;
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.015em;
   }
-  .meta {
-    color: var(--ink-soft);
-    font-style: italic;
-    font-size: 0.95rem;
-    margin: 0 0 2.5rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--rule);
-  }
-  h2 {
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    font-size: 1.35rem;
-    margin: 2.8rem 0 0.6rem;
-    letter-spacing: -0.005em;
-  }
-  p { margin: 0 0 1.1rem; color: var(--ink-soft); }
-  p strong, li strong { color: var(--ink); font-weight: 500; }
-  ul { margin: 0 0 1.1rem; padding-left: 1.3rem; color: var(--ink-soft); }
-  li { margin-bottom: 0.5rem; }
-  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
   .lead {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--ink);
     line-height: 1.55;
+    margin: 0 0 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--rule);
   }
-  .lead::first-letter {
+  p { color: var(--ink-soft); }
+  .nav-cards {
+    display: grid;
+    gap: 1rem;
+  }
+  .card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 1.4rem 1.6rem;
+    background: #fff;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .card h2 {
     font-family: 'Fraunces', serif;
-    font-size: 3.4rem;
-    float: left;
-    line-height: 0.78;
-    padding: 0.08em 0.12em 0 0;
-    color: var(--accent);
     font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0 0 0.3rem;
+    color: var(--ink);
   }
+  .card p { margin: 0; font-size: 1rem; }
+  .card .arrow { color: var(--accent); font-weight: 600; }
   footer {
     margin-top: 3.5rem;
     padding-top: 2rem;
@@ -89,32 +91,20 @@
 </head>
 <body>
   <main class="wrap">
-    <p class="eyebrow">Privacy Policy</p>
+    <p class="eyebrow">Triculator</p>
     <h1>Triculator</h1>
-    <p class="meta">Last updated: 7 June 2026</p>
+    <p class="lead">A simple, rule of three (direct proportion) calculator.</p>
 
-    <p class="lead">Triculator is built to respect your privacy completely. The app performs all calculations directly on your device and does not collect, store, or share any personal information.</p>
-
-    <h2>Information we collect</h2>
-    <p>None. Triculator does not collect any personal data. It has no account system, no sign-in, and no way to identify you. Every value you enter and every result you calculate stays on your device.</p>
-
-    <h2>How your data is used</h2>
-    <p>The numbers you type into Triculator are used only to perform the calculation you requested, on your device, in that moment. They are not transmitted to us, stored on a server, or used for any other purpose.</p>
-
-    <h2>Analytics and tracking</h2>
-    <p>Triculator does not use any analytics, advertising, or tracking technologies. It does not use cookies, device identifiers, or third-party software development kits (SDKs) that would collect information about you.</p>
-
-    <h2>Third-party services</h2>
-    <p>Triculator does not share data with third parties, because it does not collect data in the first place. The app functions entirely offline and does not require an internet connection to work.</p>
-
-    <h2>Children's privacy</h2>
-    <p>Triculator does not collect personal information from anyone, including children. The app is safe for users of all ages.</p>
-
-    <h2>Changes to this policy</h2>
-    <p>If this privacy policy changes in the future, the updated version will be posted on this page with a revised "Last updated" date.</p>
-
-    <h2>Contact</h2>
-    <p>If you have any questions about this privacy policy or about Triculator, you can reach us at <a href="mailto:rasouliszacharias@gmail.com">rasouliszacharias@gmail.com</a>.</p>
+    <div class="nav-cards">
+      <a class="card" href="support.html">
+        <h2>Support</h2>
+        <p>Questions, bug reports, or feedback — get in touch. <span class="arrow">&rarr;</span></p>
+      </a>
+      <a class="card" href="privacy.html">
+        <h2>Privacy Policy</h2>
+        <p>How Triculator handles your data. <span class="arrow">&rarr;</span></p>
+      </a>
+    </div>
 
     <footer>
       &copy; 2026 Triculator. All rights reserved.
